@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    
+    <title>Clean Elephant | Nettoyage Premium</title>
+    
+    <meta name="description" content="Service professionnel de nettoyage de vitres et tissus. Excellence et pureté pour vos espaces.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --brand-cyan: #00e5ff;
+            --brand-deep: #00111b; 
+            --pure-white: #ffffff;
+            --light-border: #f1f5f9;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--brand-deep);
+            background-color: var(--pure-white);
+            margin: 0;
+        }
+
+        .header-custom {
+            background-color: var(--brand-deep);
+        }
+
+        .hero-section {
+            position: relative;
+            background: url('background.jpg') center/cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 17, 27, 0.7); 
+            z-index: 1;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-container:hover .service-img {
+            transform: scale(1.08);
+        }
+
+        .btn-cyan {
+            background-color: var(--brand-cyan);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cyan:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 229, 255, 0.4);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed w-full z-50 header-custom shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo_top.png" alt="Logo" class="h-12 w-auto object-contain">
+                <span class="font-bold text-xl tracking-tighter uppercase text-white">Clean <span class="text-[#00e5ff]">Elephant</span></span>
+            </a>
+
+            <nav class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-[0.2em] text-gray-300">
+                <a href="index.html" class="hover:text-white transition">Accueil</a>
+                <a href="services.html" class="hover:text-white transition">Prestations</a>
+                <a href="expertise.html" class="hover:text-white transition">L'Expertise</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <a href="contact.html" class="btn-cyan text-black px-7 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest">
+                Devis Express
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-section h-screen flex items-center justify-center pt-20">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-6">
+            <h1 class="text-5xl md:text-8xl font-extrabold text-white mb-8 tracking-tighter leading-none">
+                L'ART DE LA <br><span class="text-[#00e5ff]">CLARTÉ.</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light">
+                L'excellence n'oublie aucun détail. 
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#services" class="bg-white text-black px-12 py-4 rounded-full font-bold uppercase text-sm hover:bg-gray-100 transition">
+                    Nos Services
+                </a>
+                <a href="contact.html" class="border border-white text-white px-12 py-4 rounded-full font-bold uppercase text-sm hover:bg-white hover:text-black transition">
+                    Nous Contacter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-24">
+                <h2 class="text-xs font-black tracking-[0.4em] uppercase text-cyan-500 mb-4 text-center">Excellence Technique</h2>
+                <p class="text-4xl md:text-5xl font-bold text-center tracking-tight">Solutions de nettoyage.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-16">
+                <a href="services.html#vitres" class="group service-container block">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-[3/4] shadow-sm">
+                        <img src="vitre.png" alt="Vitrages" class="service-img">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 tracking-tight">VITRAGES</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Élimination des impuretés sur tout type de support vitré, même difficile d'accès.</p>
+                    <div class="w-12 h-1.5 bg-cyan-400 transition-all group-hover:w-24"></div>
+                </a>
+
+                <a href="services.html#textiles" class="group service-container block">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-[3/4] shadow-sm">
+                        <img src="locaux.png" alt="Textiles" class="service-img">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 tracking-tight">TEXTILES</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Rénovation de vos canapés, tapis et moquettes par extraction vapeur.</p>
+                    <div class="w-12 h-1.5 bg-cyan-400 transition-all group-hover:w-24"></div>
+                </a>
+
+                <a href="services.html#pro" class="group service-container block">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-[3/4] shadow-sm">
+                        <img src="bureau.png" alt="Professionnels" class="service-img">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 tracking-tight">PRO & BUREAUX</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Protocoles de nettoyage rigoureux pour les environnements professionnels.</p>
+                    <div class="w-12 h-1.5 bg-cyan-400 transition-all group-hover:w-24"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#00111b] py-20 text-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left">
+                <img src="logo.jpg" alt="Logo" class="h-10 w-auto mb-6 mx-auto md:mx-0">
+                <p class="text-[10px] text-gray-500 tracking-[0.5em] uppercase font-bold">© 2026 Clean Elephant Studio</p>
+            </div>
+            <div class="flex gap-10 mt-10 md:mt-0 text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">
+                <a href="https://instagram.com" class="hover:text-cyan-400 transition">Instagram</a>
+                <a href="https://linkedin.com" class="hover:text-cyan-400 transition">LinkedIn</a>
+                <a href="mentions.html" class="hover:text-cyan-400 transition">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
